@@ -33,7 +33,7 @@ header {
   background-color: var(--graphite-black);
 }
 
-/* Navigation bar container */
+/* Navigation bar container. 1rem = 16px (Root font size) */
 nav {
   max-width: 1024px;
   margin: 0 auto;
@@ -57,15 +57,28 @@ nav {
   gap: 0.3rem;
   font-size: 0.9rem;
   user-select: none;
+
 }
 
-/* Center "logo" text styling */
+/* Center navigation logo */
 .nav-center {
-  flex-grow: 1;
+  flex-grow: 3;
   justify-content: center;
   cursor: default;
   font-family: 'Merriweather', serif;
   font-size: 1.3rem;
+  padding: 0;
+  background-color: transparent;
+  max-width: 300px;
+}
+
+/* Logo image inside the center navigation pill */
+.nav-logo {
+  height: 100px;      /* Adjust height to fit nav bar */
+  width: 200px;       /* Adjust width to fit nav bar */
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;    /* Center inside the pill */
 }
 
 /* Main content area flex container */
