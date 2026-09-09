@@ -48,35 +48,35 @@ nav {
 .nav-pill {
   background-color: var(--charcoal);
   color: var(--sand-white);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 9999px; /* Fully rounded */
   text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   user-select: none;
 
 }
 
 /* Center navigation logo */
 .nav-center {
-  flex-grow: 3;
+  flex-grow: 1;
+  width:auto;
+  padding: 0;
   justify-content: center;
   cursor: default;
   font-family: 'Merriweather', serif;
   font-size: 1.3rem;
-  padding: 0;
   background-color: transparent;
-  max-width: 300px;
 }
 
 /* Logo image inside the center navigation pill */
 .nav-logo {
-  height: 100px;      /* Adjust height to fit nav bar */
-  width: 200px;       /* Adjust width to fit nav bar */
-  max-width: 90%;
+  height: auto;      /* Adjust height to fit nav bar */
+  width: 150px !important;       /* force width */
+  max-width: 100%;
   display: block;
   margin: 0 auto;    /* Center inside the pill */
 }
