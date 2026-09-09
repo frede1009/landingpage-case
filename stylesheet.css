@@ -1,0 +1,94 @@
+/* Brand Color Palette */
+:root {
+  --graphite-black: #0B0F0D;
+  --charcoal: #1F1F1F;
+  --titanium-grey: #8A8F92;
+  --forest-green: #2E5D4B;
+  --sand-white: #F5F5EF;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--sand-white);
+  color: var(--charcoal);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: var(--graphite-black);
+  color: var(--sand-white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 0.3rem;
+  color: var(--forest-green);
+}
+
+/* Main Content */
+main {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: white;
+  border: 1px solid var(--titanium-grey);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(46, 93, 75, 0.1); /* subtle forest-green shadow */
+}
+
+h2 {
+  color: var(--graphite-black);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+button {
+  background: linear-gradient(90deg, var(--graphite-black), var(--forest-green));
+  color: var(--sand-white);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: var(--forest-green);
+}
+
+/* Footer */
+footer {
+  background-color: var(--charcoal);
+  color: var(--sand-white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
