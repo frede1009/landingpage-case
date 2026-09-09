@@ -1,94 +1,211 @@
-/* Brand Color Palette */
+/* Import Merriweather serif font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+/* Color Palette */
 :root {
-  --graphite-black: #0B0F0D;
-  --charcoal: #1F1F1F;
-  --titanium-grey: #8A8F92;
-  --forest-green: #2E5D4B;
-  --sand-white: #F5F5EF;
+  --graphite-black: #0b0f0d;
+  --forest-green: #2e5d4b;
+  --titanium-grey: #8a8f92;
+  --sand-white: #f5f5ef;
+  --charcoal: #1f1f1f;
+  --gradient-start: #2e5d4b;
+  --gradient-end: #0b0f0d;
 }
 
-/* Reset */
+/* Reset box sizing for all elements */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+/* Body styles: background gradient and base font setup */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--sand-white);
-  color: var(--charcoal);
-  line-height: 1.6;
+  margin: 0;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: var(--sand-white);
+  font-family: Arial, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Header */
+/* Header styles */
 header {
   background-color: var(--graphite-black);
+}
+
+/* Navigation bar container */
+nav {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  gap: 1rem;
+}
+
+/* Pill-shaped navigation links */
+.nav-pill {
+  background-color: var(--charcoal);
   color: var(--sand-white);
-  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Fully rounded */
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Center "logo" text styling */
+.nav-center {
+  flex-grow: 1;
+  justify-content: center;
+  cursor: default;
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+}
+
+/* Main content area flex container */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem 1rem;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-top: 0.3rem;
-  color: var(--forest-green);
-}
-
-/* Main Content */
-main {
-  flex-grow: 1;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-section {
-  background-color: white;
-  border: 1px solid var(--titanium-grey);
-  border-radius: 8px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(46, 93, 75, 0.1); /* subtle forest-green shadow */
-}
-
-h2 {
+/* The central white panel containing the product info */
+.panel {
+  background-color: var(--sand-white);
   color: var(--graphite-black);
-  margin-bottom: 1rem;
-  font-weight: 700;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0 0 40px 6px rgba(46, 93, 75, 0.5); /* Soft green shadow */
+  overflow: hidden;
 }
 
+/* Left image section with watch and phone images */
+.image-section {
+  flex: 1;
+  background: var(--forest-green);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Images styling with shadow and rounded corners */
+.image-section img {
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Smaller phone image */
+.phone {
+  width: 140px;
+}
+
+/* Right content section */
+.content-section {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Headline with serif font, uppercase, and spacing */
+.content-section h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1.2px;
+}
+
+/* Paragraph description spacing */
+.content-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Feature list styles with disc bullet inside box */
+.content-section ul {
+  list-style: inside disc;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--graphite-black);
+}
+
+/* Space between feature items */
+.content-section ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* Buttons container with spacing */
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* General button styles */
 button {
+  cursor: pointer;
+  border: none;
+  border-radius: 9999px; /* Fully rounded */
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Primary button with gradient background and light text */
+.btn-primary {
   background: linear-gradient(90deg, var(--graphite-black), var(--forest-green));
   color: var(--sand-white);
-  border: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 1rem;
 }
 
-button:hover {
+/* Hover effect for primary button */
+.btn-primary:hover {
   background: var(--forest-green);
 }
 
-/* Footer */
-footer {
-  background-color: var(--charcoal);
+/* Secondary button: dark background and light text */
+.btn-secondary {
+  background-color: var(--graphite-black);
   color: var(--sand-white);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 720px) {
+  /* Stack panel vertically */
+  .panel {
+    flex-direction: column;
+  }
+  /* Adjust padding and center text */
+  .image-section, .content-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  .content-section ul {
+    padding-left: 1rem;
+  }
+  /* Center buttons and allow wrap */
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /* Buttons full width on small screens */
+  button {
+    width: 140px;
+  }
 }

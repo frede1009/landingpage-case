@@ -1,29 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pulse Athletics</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse Athletics - PULSE Core</title>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="stylesheet.css" />
+  <!-- Merriweather serif font for headline -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome for shopping cart icon -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
+  <!-- Page header with navigation -->
   <header>
-    <h1>Pulse Athletics</h1>
-    <p class="tagline">Every Beat Counts.</p>
+    <nav>
+      <!-- Left pill navigation item -->
+      <a href="#" class="nav-pill nav-left">Products</a>
+      <!-- Center logo text -->
+      <div class="nav-pill nav-center">LOGO</div>
+      <!-- Right pill navigation with cart icon -->
+      <a href="#" class="nav-pill nav-right">
+        About us <i class="fa fa-shopping-cart"></i>
+      </a>
+    </nav>
   </header>
+
+  <!-- Main content area -->
   <main>
-    <section class="about">
-      <h2>About Us</h2>
-      <p>Pulse Athletics is dedicated to inspiring personal growth through performance and technology, with a commitment to every beat of your journey.</p>
-    </section>
-    <section class="services">
-      <h2>Our Services</h2>
-      <p>We provide top-tier athletic gear and training programs designed to help you perform at your best.</p>
-      <button>Learn More</button>
-    </section>
+    <!-- Central panel with product info -->
+    <div class="panel">
+      <!-- Left side: product images -->
+      <div class="image-section">
+        <img src="images/watch.png" alt="PULSE Core Watch" class="watch" />
+        <img src="images/phone.png" alt="PULSE App Phone" class="phone" />
+      </div>
+      <!-- Right side: headline, description, features, and CTAs -->
+      <div class="content-section">
+        <h1>MAKE EVERY WORKOUT COUNT.</h1>
+        <p>PULSE Core tracks your performance, recovery and everyday activity.</p>
+        <ul>
+          <li>Track workout</li>
+          <li>Heart rate monitor</li>
+          <li>Track REM-sleep</li>
+          <li>Analyze tendencies</li>
+          <li>Achieve goals</li>
+        </ul>
+        <div class="buttons">
+          <button class="btn-primary">Buy Now</button>
+          <button class="btn-secondary">More Specs & Features</button>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer>
-    <p>Contact us: info@pulseathletics.com</p>
-  </footer>
 </body>
 </html>
