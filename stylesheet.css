@@ -1,7 +1,6 @@
-/* Import Merriweather serif font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-/* Color Palette */
+
 :root {
   --graphite-black: #0b0f0d;
   --forest-green: #2e5d4b;
@@ -15,6 +14,15 @@
 /* Reset box sizing for all elements */
 * {
   box-sizing: border-box;
+}
+
+/* Reset margins and padding for semantic containers */
+section, article, figure, nav {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  display: block;
 }
 
 /* Body styles: background gradient and base font setup */
@@ -74,11 +82,11 @@ nav {
 
 /* Logo image inside the center navigation pill */
 .nav-logo {
-  height: auto;      /* Adjust height to fit nav bar */
-  width: 150px !important;       /* force width */
+  height: auto;
+  width: 150px;
   max-width: 100%;
   display: block;
-  margin: 0 auto;    /* Center inside the pill */
+  margin: 0 auto;
 }
 
 /* Main content area flex container */
@@ -98,7 +106,7 @@ main {
   width: 100%;
   border-radius: 20px;
   display: flex;
-  box-shadow: 0 0 40px 6px rgba(46, 93, 75, 0.5); /* Soft green shadow */
+  box-shadow: 0 0 40px 6px rgba(46, 93, 75, 0.5);
   overflow: hidden;
 }
 
@@ -143,12 +151,14 @@ main {
   text-transform: uppercase;
   margin-bottom: 1rem;
   letter-spacing: 1.2px;
+  color: var(--graphite-black);
 }
 
 /* Paragraph description spacing */
 .content-section p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
+  color: var(--graphite-black);
 }
 
 /* Feature list styles with disc bullet inside box */
