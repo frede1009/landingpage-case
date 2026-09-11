@@ -174,10 +174,68 @@ main {
   margin-bottom: 0.6rem;
 }
 
-/* Buttons container with spacing */
-.buttons {
-  display: flex;
-  gap: 1rem;
+/* Breadcrumbs navigation list */
+.breadcrumbs ul {
+  list-style: none;               /* Remove default bullets */
+  display: flex;                  /* Arrange items horizontally */
+  gap: 0.5rem;                   /* Space between items */
+  font-size: 0.9rem;              /* Smaller font size */
+  color: var(--titanium-grey);   /* Subtle muted grey */
+  margin-bottom: 1rem;            /* Space below breadcrumbs */
+  padding-left: 0;                /* Remove default ul padding */
+}
+
+.breadcrumbs ul li:not(:last-child)::after {
+  content: "/";                  /* Slash separator */
+  margin-left: 0.5rem;            /* Space after slash */
+  color: var(--titanium-grey);   /* Matching grey */
+}
+
+/* Product part number styling */
+.part-number {
+  color: var(--titanium-grey);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Pricing container */
+.pricing {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  
+}
+
+/* Key functions feature list */
+.key-functions {
+  list-style-type: none;          /* Remove default bullets */
+  padding-left: 1.5rem;           /* Indent for bullets */
+  margin-left: -1.2rem;           /* Reset left margin */
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--graphite-black); /* Darker color for emphasis */
+}
+
+.key-functions li {
+  list-style-type: none;
+  margin-bottom: 0.6rem;         /* Space between list items */
+  text-indent: 0;
+  padding-left: 1.5rem;          /* Space for the checkmark */
+  position: relative;              /* For positioning the checkmark */
+  
+}
+
+.key-functions li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--forest-green); 
+  margin-right: 0.5rem;
+  font-weight: bold;
+  line-height: 1.2; /* Align checkmark with text */
+  
 }
 
 /* General button styles */
@@ -192,21 +250,25 @@ button {
 }
 
 /* Primary button with gradient background and light text */
-.btn-primary {
+.btn-buynow {
+  
+  display: inline-block;
   background: linear-gradient(90deg, var(--graphite-black), var(--forest-green));
   color: var(--sand-white);
 }
 
 /* Hover effect for primary button */
-.btn-primary:hover {
+.btn-buynow:hover {
   background: var(--forest-green);
 }
 
-/* Secondary button: dark background and light text */
-.btn-secondary {
+
+/*.btn-secondary {
   background-color: var(--graphite-black);
   color: var(--sand-white);
-}
+} /*
+
+
 
 /* Responsive styles for smaller screens */
 @media (max-width: 720px) {
