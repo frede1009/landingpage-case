@@ -106,7 +106,7 @@ main {
   width: 100%;
   border-radius: 20px;
   display: flex;
-  box-shadow: 0 0 40px 6px rgba(46, 93, 75, 0.5);
+  box-shadow: 0 0 40px 6px var(--gradient-start);
   overflow: hidden;
 }
 
@@ -124,7 +124,7 @@ main {
 
 /* Images styling with shadow and rounded corners */
 .image-section img {
-  width: 180px;
+  width: 350px;
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
@@ -267,8 +267,7 @@ button {
   background-color: var(--graphite-black);
   color: var(--sand-white);
 } /*
-
-
+ 
 
 /* Responsive styles for smaller screens */
 @media (max-width: 720px) {
