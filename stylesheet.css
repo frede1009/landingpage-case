@@ -44,7 +44,7 @@ header {
 /* Navigation bar container. 1rem = 16px (Root font size) */
 nav {
   max-width: 1024px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,11 +59,11 @@ nav {
   padding: 0.6rem 1.2rem;
   border-radius: 9999px; /* Fully rounded */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   user-select: none;
 
 }
@@ -81,6 +81,7 @@ nav {
 .nav-center {
   flex-grow: 1;
   width:auto;
+  min-width: auto;
   padding: 0;
   justify-content: center;
   cursor: default;
@@ -123,6 +124,26 @@ main {
   
 }
 
+.panel-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.scroll-connector {
+  width: 2.5px;
+  height: 25px;
+  background-color: var(--forest-green);
+  opacity: 1;
+  border-radius: 1px;
+  margin: 3rem auto 1.5rem;   /*  auto = centered horizontally */
+  pointer-events: none;
+  user-select: none;
+}
+
+
 /* Left image section with watch and phone images */
 .image-section {
   flex: 1;
@@ -131,7 +152,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -147,6 +168,7 @@ main {
 .phone {
   width: 140px;
 }
+
 
 /* Right content section */
 .content-section {
@@ -325,12 +347,70 @@ button {
   font-style: italic;               /* Italic style */
   color: var(--forest-green);      /* Muted text color */
   font-size: 1rem;                  /* Set font size */
-  margin: 3rem 0;                        /* Vertical spacing */
+  margin: 0; 
   text-align: left;               /* Center the text horizontally */
   max-width: 600px;                 /* Limit the width */
   margin-left: auto;                /* Center block horizontally */
   margin-right: auto;
   line-height: 1.6;                  /* Improve readability */
+}
+
+
+footer {
+  background-color: var(--forest-green);
+  color: var(--sand-white);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+  user-select: none;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer nav a {
+  color: var(--sand-white);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+  color: var(--titanium-grey);
+  text-decoration: underline;
+}
+
+footer p a {
+  color: var(--sand-white);
+  margin: 0 0.3rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer p a:hover {
+  color: var(--graphite-black);
+}
+
+footer p:last-child {
+  margin-top: 1rem;
+}
+
+/* Social icons styling */
+footer p a > i.fab {
+  font-size: 1.2rem;
+  margin: 0 0.4rem;
+  vertical-align: middle;
+  color: var(--sand-white);
+  transition: color 0.3s ease;
+}
+
+footer p a:hover > i.fab {
+  color: var(--titanium-grey);
+  cursor: pointer;
 }
 
  

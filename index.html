@@ -23,7 +23,6 @@
 </head>
 
 <body>
-
 <!-- Page header with navigation -->
   <header>
     <nav>
@@ -45,16 +44,20 @@
 
 
   <main>
-    <section class="panel">
+
+    <!-- .panel-container class to make vertical line underneath-->
+    <div class="panel-container"> 
+
+
+      <section class="panel">
 <!-- Left side: product images -->
       <figure class="image-section">
         <img src="images/pulse-ur.png" alt="PULSE Core Watch" class="watch" />
-        <img src="images/pulseapp.png" alt="PULSE App Phone" class="phone" />
-
+        <img src="images/pulse-ur-red.png" alt="PULSE Core Watch" class="watch" />
+<!--    <img src="images/pulseapp.png" alt="PULSE App Phone" class="phone" /> --> 
       </figure>
-
 <!-- Right side: headline, description, features, and CTAs -->
-<article class="content-section">
+        <article class="content-section">
 
   <!-- Breadcrumbs -->
   <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -92,8 +95,28 @@
   <p class="citation">
     <em>"Designet til dig, der vil have mere end bare data — et fitnessarmbånd, der hjælper dig med at nå dine mål og følge din udvikling hver dag."</em>
   </p>
-</article>
-    </section>
+        </article>
+      </section>
+
+  <div class="scroll-connector" aria-hidden="true"></div>
+
+    </div>
   </main>
+
+<footer>
+  <p>&copy; 2026 Pulse Athletics. Alle rettigheder forbeholdes.</p>
+  <p>Kontakt os: <a href="mailto:info@pulseathletics.dk">info@pulseathletics.dk</a> | +45 1234 5678</p>
+  <nav>
+    <a href="#">Produkter</a> | <a href="#">FAQ</a> | <a href="#">Om Os</a>
+  </nav>
+  <p>
+    Følg os: 
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> 
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  </p>
+  <p><a href="#">Privatlivspolitik</a> | <a href="#">Vilkår og Betingelser</a></p>
+</footer>
+
 </body>
 </html>
