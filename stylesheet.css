@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 :root {
+
+  
   --graphite-black: #0b0f0d;
   --forest-green: #2e5d4b;
   --titanium-grey: #8a8f92;
@@ -9,6 +11,16 @@
   --charcoal: #1f1f1f;
   --gradient-start: #2e5d4b;
   --gradient-end: #0b0f0d;
+  
+  /* Color palette in rgba */
+  --graphite-black-rgb: 11, 15, 13;      /* #0b0f0d */
+  --forest-green-rgb: 46, 93, 75;        /* #2e5d4b */
+  --titanium-grey-rgb: 138, 143, 146;    /* #8a8f92 */
+  --sand-white2-rgb: 245, 245, 245;      /* #f5f5f5 */
+  --sand-white-rgb: 217, 217, 217;       /* #d9d9d9 */
+  --charcoal-rgb: 31, 31, 31;             /* #1f1f1f */
+  --gradient-start-rgb: 46, 93, 75;      /* #2e5d4b */
+  --gradient-end-rgb: 11, 15, 13;        /* #0b0f0d */
 }
 
 /* Reset box sizing for all elements */
@@ -57,7 +69,7 @@ nav {
   background-color: var(--charcoal);
   color: var(--sand-white);
   padding: 0.6rem 1.2rem;
-  border-radius: 9999px; /* Fully rounded */
+  border-radius: 9999px;
   text-decoration: none;
   font-weight: normal;
   display: flex;
@@ -65,7 +77,6 @@ nav {
   gap: 0.3rem;
   font-size: 1rem;
   user-select: none;
-
 }
 
 /* left and right navigation pills hover effect */
@@ -116,17 +127,17 @@ main {
 .panel {
   background-color: var(--sand-white);
   color: var(--graphite-black);
-  max-width: 900px;
+  max-width: 1024px;
   width: 100%;
   border-radius: 20px;
   display: flex;
   box-shadow:
-    0 4px 10px rgba(46, 93, 75, 0.15),
+    0 4px 10px rgba(var(--forest-green-rgb), 0.15),
     0 8px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   flex-direction:row;
-  margin-top: 3rem;
-  
+  margin-top: 5rem;
+
 }
 
 .panel-container {
@@ -134,19 +145,6 @@ main {
   width: 100%;
   margin: 0 auto;
   position: relative;
-}
-
-
-.scroll-connector {
-  width: 1px;
-  height: 75px;
-  background-color: var(--sand-white);
-  opacity: 1;
-  border-radius: 1px;
-  margin: 4rem auto 3rem;   /*  auto = centered horizontally */
-
-  pointer-events: none;
-  user-select: none;
 }
 
 
@@ -363,6 +361,41 @@ button {
 }
 
 /* --------------------------------------------------
+    Fashionable dots and lines (with no function what so ever xD)
+-------------------------------------------------- */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 4rem 0;
+
+}
+.pagination-dots.top-dots {
+  margin-bottom: 5.5rem !important;
+
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--sand-white2);
+  border-radius: 9999px;
+  opacity: 1;
+} 
+
+.scroll-connector {
+  width: 1px;
+  height: 75px;
+  background-color: var(--sand-white);
+  opacity: 1;
+  border-radius: 1px;
+  margin: 5rem auto -5rem auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* --------------------------------------------------
     Testimonials Section Styles
 -------------------------------------------------- */
 .testimonials-section {
@@ -375,30 +408,33 @@ button {
 }
 
 .testimonial-headline {
-  font-variant: small-caps;        /* small caps style */
-  font-weight: 400;                /* lighter weight */
-  font-family: 'Merriweather', serif;
-  font-size: 2rem;               /* relatively large */
-  line-height: 1.5;                /* good line spacing */
-  letter-spacing: 0.2em;           /* wide letter spacing */
+  font-variant: normal; 
+  font-weight: 400;
+  font-family: "playfair Display SC";
+  font-size: 2rem;  
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: 0.5rem;
   text-align: center;
-  color: #f0eee9;                 /* off-white / cream */
+  color: var(--sand-white);
   margin-bottom: 3rem;
-  text-transform: uppercase;       /* all caps */
-
-  margin-top: 3rem;
+  text-transform: uppercase;
+  margin-top: 5rem;
 }
 
 
 /* Background container for testimonial blocks */
 .testimonial-background {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
     gap: 2rem;
   padding: 2rem;
   background:
-    linear-gradient(rgba(46, 93, 75, 0.7), rgba(46, 93, 75, 0.7)),
+    linear-gradient(rgba(46, 93, 75, 0.3), rgba(46, 93, 75, 0.7)),
     url('images/runnderbackground.png') center center / cover no-repeat;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -409,7 +445,7 @@ button {
 .testimonial-block {
   position: static;
   max-width: 300px;
-  background-color: rgba(30, 70, 55, 0.7);
+  background-color: rgba(var(--gradient-start-rgb), 0.6);
   padding: 1.2rem 1.5rem;
   border-radius: 15px;
   font-style: italic;
@@ -419,25 +455,6 @@ button {
   color: var(--sand-white);
 }
 
-
-/* Add this for the bottom-right testimonial if you want */
-.testimonial-block.right.bottom {
-  bottom: 20px;
-  right: 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 720px) {
-  .testimonial-background {
-    height: auto;
-    padding: 2rem 1rem;
-  }
-  .testimonial-block {
-    position: static;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
-}
 
 
 /* --------------------------------------------------
@@ -503,15 +520,14 @@ footer p a:hover > i.fab {
 
 
 /* --------------------------------------------------
-    Responsive styles for smaller screens
+    Responsive styles for 720px or less
 -------------------------------------------------- */
 
 @media (max-width: 720px) {
-  /* Stack panel vertically */
+
   .panel {
     flex-direction: column;
   }
-  /* Adjust padding and center text */
   .image-section, .content-section {
     padding: 2rem;
     text-align: center;
@@ -519,13 +535,23 @@ footer p a:hover > i.fab {
   .content-section ul {
     padding-left: 1rem;
   }
-  /* Center buttons and allow wrap */
   .buttons {
     justify-content: center;
     flex-wrap: wrap;
   }
-  /* Buttons full width on small screens */
   button {
     min-width:140px;
+  }
+  .testimonial-background {
+    grid-template-columns: 1fr;  /* single column */
+    grid-template-rows: auto;    /* auto rows */
+  }
+  .testimonial-block {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    position: static;
+  }
+  .testimonial-headline {
+    max-width: 400px;
   }
 }
