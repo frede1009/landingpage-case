@@ -4,8 +4,8 @@
   --graphite-black: #0b0f0d;
   --forest-green: #2e5d4b;
   --titanium-grey: #8a8f92;
-  --sand-white: #f5f5f5;
-  --sand-white2: #C6C8C7;
+  --sand-white2: #f5f5f5;
+  --sand-white: #d9d9d9;
   --charcoal: #1f1f1f;
   --gradient-start: #2e5d4b;
   --gradient-end: #0b0f0d;
@@ -103,12 +103,16 @@ nav {
 main {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;       /* Add this to stack children vertically */
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
+  gap: 1rem;                    /* Optional: space between panel and testimonials */
 }
 
-/* The central white panel containing the product info */
+/* --------------------------------------------------
+    First Panel Section Styles
+-------------------------------------------------- */
 .panel {
   background-color: var(--sand-white);
   color: var(--graphite-black);
@@ -121,6 +125,7 @@ main {
     0 8px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   flex-direction:row;
+  margin-top: 3rem;
   
 }
 
@@ -133,12 +138,13 @@ main {
 
 
 .scroll-connector {
-  width: 2.5px;
-  height: 25px;
-  background-color: var(--forest-green);
+  width: 1px;
+  height: 75px;
+  background-color: var(--sand-white);
   opacity: 1;
   border-radius: 1px;
-  margin: 3rem auto 1.5rem;   /*  auto = centered horizontally */
+  margin: 4rem auto 3rem;   /*  auto = centered horizontally */
+
   pointer-events: none;
   user-select: none;
 }
@@ -289,11 +295,12 @@ main {
   font-weight: bold;
   line-height: 1.2; /* Align checkmark with text */
   font-size: 1.2rem; /* Slightly larger checkmark for visibility */
-  
-  
+
 }
 
-/* General button styles */
+/* --------------------------------------------------
+    Button styles
+-------------------------------------------------- */
 button {
   cursor: pointer;
   border: none;
@@ -355,12 +362,93 @@ button {
   line-height: 1.6;                  /* Improve readability */
 }
 
+/* --------------------------------------------------
+    Testimonials Section Styles
+-------------------------------------------------- */
+.testimonials-section {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 0 2rem 4rem;
+  font-family: 'Merriweather', serif;
+  color: var(--sand-white);
+  text-align: center;
+}
+
+.testimonial-headline {
+  font-variant: small-caps;        /* small caps style */
+  font-weight: 400;                /* lighter weight */
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;               /* relatively large */
+  line-height: 1.5;                /* good line spacing */
+  letter-spacing: 0.2em;           /* wide letter spacing */
+  text-align: center;
+  color: #f0eee9;                 /* off-white / cream */
+  margin-bottom: 3rem;
+  text-transform: uppercase;       /* all caps */
+
+  margin-top: 3rem;
+}
+
+
+/* Background container for testimonial blocks */
+.testimonial-background {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+    gap: 2rem;
+  padding: 2rem;
+  background:
+    linear-gradient(rgba(46, 93, 75, 0.7), rgba(46, 93, 75, 0.7)),
+    url('images/runnderbackground.png') center center / cover no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+}
+
+/* Testimonial cards absolutely positioned inside background */
+.testimonial-block {
+  position: static;
+  max-width: 300px;
+  background-color: rgba(30, 70, 55, 0.7);
+  padding: 1.2rem 1.5rem;
+  border-radius: 15px;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  color: var(--sand-white);
+}
+
+
+/* Add this for the bottom-right testimonial if you want */
+.testimonial-block.right.bottom {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  .testimonial-background {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .testimonial-block {
+    position: static;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* --------------------------------------------------
+    Footer Section
+-------------------------------------------------- */
 
 footer {
   background-color: var(--forest-green);
   color: var(--sand-white);
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   font-size: 0.9rem;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
@@ -413,9 +501,11 @@ footer p a:hover > i.fab {
   cursor: pointer;
 }
 
- 
 
-/* Responsive styles for smaller screens */
+/* --------------------------------------------------
+    Responsive styles for smaller screens
+-------------------------------------------------- */
+
 @media (max-width: 720px) {
   /* Stack panel vertically */
   .panel {
