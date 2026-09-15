@@ -2,7 +2,7 @@
 
 :root {
 
-  
+  /* Color palette */
   --graphite-black: #0b0f0d;
   --forest-green: #2e5d4b;
   --titanium-grey: #8a8f92;
@@ -23,7 +23,7 @@
   --gradient-end-rgb: 11, 15, 13;        /* #0b0f0d */
 }
 
-/* Reset box sizing for all elements */
+/* border-box sizing for all elements */
 * {
   box-sizing: border-box;
 }
@@ -87,7 +87,6 @@ nav {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 /* Center navigation logo */
 .nav-center {
   flex-grow: 1;
@@ -120,6 +119,8 @@ main {
   padding: 2rem 1rem;
   gap: 1rem;                    /* Optional: space between panel and testimonials */
 }
+
+
 
 /* --------------------------------------------------
     First Panel Section Styles
@@ -172,7 +173,6 @@ main {
 .phone {
   width: 140px;
 }
-
 
 /* Right content section */
 .content-section {
@@ -296,6 +296,8 @@ main {
 
 }
 
+
+
 /* --------------------------------------------------
     Button styles
 -------------------------------------------------- */
@@ -348,17 +350,20 @@ button {
   border-color: var(--forest-green);
 }
 
+/* Quote in first section styles */
 .citation {
-  font-style: italic;               /* Italic style */
-  color: var(--forest-green);      /* Muted text color */
-  font-size: 1rem;                  /* Set font size */
+  font-style: italic;
+  color: var(--forest-green);
+  font-size: 1rem;
   margin: 0; 
-  text-align: left;               /* Center the text horizontally */
-  max-width: 600px;                 /* Limit the width */
-  margin-left: auto;                /* Center block horizontally */
+  text-align: left; 
+  max-width: 600px;
+  margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;                  /* Improve readability */
+  line-height: 1.6; 
 }
+
+
 
 /* --------------------------------------------------
     Fashionable dots and lines (with no function what so ever xD)
@@ -395,9 +400,11 @@ button {
 }
 
 
+
 /* --------------------------------------------------
     Testimonials Section Styles
 -------------------------------------------------- */
+
 .testimonials-section {
   max-width: 1024px;
   margin: 3rem auto 3rem;
@@ -442,7 +449,7 @@ button {
   overflow: visible;
 }
 
-/* Testimonial cards absolutely positioned inside background */
+/* Testimonials cards positioned inside background */
 .testimonial-block {
   position: static;
   max-width: 300px;
