@@ -141,7 +141,7 @@ main {
 }
 
 .panel-container {
-  max-width: 900px;
+  max-width: 1024px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -399,12 +399,13 @@ button {
     Testimonials Section Styles
 -------------------------------------------------- */
 .testimonials-section {
-  max-width: 900px;
-  margin: 3rem auto 0;
+  max-width: 1024px;
+  margin: 3rem auto 3rem;
   padding: 0 2rem 4rem;
   font-family: 'Merriweather', serif;
   color: var(--sand-white);
   text-align: center;
+  scale: 1.1;
 }
 
 .testimonial-headline {
@@ -419,7 +420,7 @@ button {
   color: var(--sand-white);
   margin-bottom: 3rem;
   text-transform: uppercase;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 
@@ -431,7 +432,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-    gap: 2rem;
+  gap: 2rem;
   padding: 2rem;
   background:
     linear-gradient(rgba(46, 93, 75, 0.3), rgba(46, 93, 75, 0.7)),
